@@ -11,6 +11,85 @@
 */
 
 .page {
+  font-family: var(--main-font);
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--text-weight);
+}
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 2px #000 solid;
+  padding-inline: clamp(14px, 8vw, 120px);
+  padding-block: clamp(120px, 20vw, 128px);
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  background-color: #fff;
+  inline-size: var(--content-width);
+}
+.title {
+  font-size: clamp(49px, 6vw, 65px);
+  line-height: 1;
+}
+.subtitle {
+  font-size: clamp(14px, 2vw, 23px);
+  line-height: 1;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.card {
+  inline-size: var(--content-width);
+  background-color: #fff;
+  border: 2px solid #000;
+}
+.card__title {
+  font-variation-settings: "wght" var(--title-weight);
+}
+.card__text {
+  font-variation-settings: "wght" var(--text-weight);
+}
+.card__image-wrapper {
+  position: relative;
+}
+.card__label {
+  position: absolute;
+  font-family: var(--accent-font);
+  right: 25px;
+  top: 25px;
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  -webkit-text-stroke: #fff 1px;
+  text-shadow:
+    -1px 0 var(--stroke-color),
+    0 1px var(--stroke-color),
+    1px 0 var(--stroke-color),
+    0 -1px var(--stroke-color);
+}
+@supports (
+  (-webkit-text-stroke: 1px var(--stroke-color)) or
+(text-stroke: 1px var(--stroke-color))
+) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--stroke-color);
+    text-stroke: 1px var(--stroke-color);
+    text-shadow: none;
+  }
 }
