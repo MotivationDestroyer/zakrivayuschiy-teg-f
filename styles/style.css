@@ -61,9 +61,16 @@
 }
 .card__title {
   font-variation-settings: "wght" var(--title-weight);
+  font-size: 18px;
 }
 .card__text {
   font-variation-settings: "wght" var(--text-weight);
+  font-size: 18px;
+  line-height: 21px;
+}
+.card__image {
+  display: block;
+  inline-size: 100%;
 }
 .card__image-wrapper {
   position: relative;
@@ -76,7 +83,6 @@
   font-size: 14px;
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  -webkit-text-stroke: #fff 1px;
   text-shadow:
     -1px 0 var(--stroke-color),
     0 1px var(--stroke-color),
@@ -92,4 +98,103 @@
     text-stroke: 1px var(--stroke-color);
     text-shadow: none;
   }
+}
+.card__body {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    padding: 25px;
+}
+.card__buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  padding: 0 25px 25px;
+}
+.card__like-button {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 0.9;
+  padding: 12.5px 37px;
+  border: 2px solid #000;
+  background-color: transparent;
+  cursor: pointer;
+}
+.card__like-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.card__like-button:focus {
+  box-shadow: 2px 2px 0px 0px #000;
+}
+.card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 39px;
+  block-size: 38px;
+  padding: 0;
+  border: 2px solid transparent;
+  background-color: transparent;
+}
+.save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 0.9;
+  border: 2px solid #000;
+  padding: 17px 20px;
+  cursor: pointer;
+}
+.save-button__icon {
+  inline-size: 21px;
+  block-size: 21px;
+  flex-shrink: 0;
+}
+
+.sprites {
+  position: absolute;
+  inline-size: 0;
+  block-size: 0;
+  overflow: hidden;
+}
+.dialog {
+  border: 2px solid #000;
+  padding: 30px;
+  max-block-size: 353px;
+}
+.dialog::backdrop {
+  background-color: #000;
+  opacity: 75%;
+}
+.dialog__form {
+  font-family: var(--accent-font);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.dialog__icon {
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+}
+.dialog__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.dialog__text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.dialog__button {
+  font-size: 14px; 
+  line-height: 0.9;
+  padding: 12.5px 132.5px;
+  background-color: transparent;
 }
