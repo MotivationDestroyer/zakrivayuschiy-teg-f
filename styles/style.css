@@ -62,6 +62,30 @@
   display: block;
   inline-size: 100%;
 }
+.filter-brightness {
+  filter: brightness(0.4);
+}
+.filter-contrast {
+  filter: contrast(111%);
+}
+.filter-grayscale {
+  filter: grayscale(50%);
+}
+.filter-invert {
+  filter: invert(75%);
+}
+.filter-hue {
+  filter: hue-rotate(90deg);
+}
+.filter-saturate {
+  filter: saturate(30%);
+}
+.filter-sepia {
+  filter: sepia(60%);
+}
+.filter-multiply {
+  filter: brightness(0.4) contrast(111%) grayscale(50%) invert(75%) hue-rotate(90deg) saturate(30%) sepia(60%);
+}
 .card__image-wrapper {
   position: relative;
 }
