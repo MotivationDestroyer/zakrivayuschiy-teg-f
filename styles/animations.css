@@ -22,10 +22,6 @@
   transition: fill 0.3s linear;
 }
 
-.like-icon .sparks__plus {
-  fill: #fff;
-}
-
 .like-icon .sparks {
   opacity: 0;
   pointer-events: none;

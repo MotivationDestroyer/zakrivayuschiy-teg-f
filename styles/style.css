@@ -55,12 +55,14 @@
 }
 .card__text {
   font-size: 18px;
-  line-height: 21px;
+  line-height: 1.2;
   font-variation-settings: "wght" var(--text-weight);
 }
 .card__image {
   display: block;
   inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .filter-brightness {
   filter: brightness(0.4);
@@ -88,6 +90,10 @@
 }
 .card__image-wrapper {
   position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 .card__label {
   position: absolute;
@@ -102,6 +108,7 @@
     1px 0 var(--stroke-color),
     0 -1px var(--stroke-color);
   mix-blend-mode: hard-light;
+  text-transform: uppercase;
 }
 @supports (
   (-webkit-text-stroke: 1px var(--stroke-color)) or
@@ -126,9 +133,7 @@
   gap: 6px;
   padding: 0 25px 25px;
 }
-.card__like-button,
-.save-button,
-.dialog__button {
+button {
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 0.9;
@@ -156,7 +161,7 @@
   inset: 0;
   background-color: #000;
   transition: transform 0.5s ease-in-out;
-  transform: translateX(-100%) translateY(-20%);
+  transform: translateX(-100%);
 }
 
 .button:hover::before {
@@ -188,6 +193,7 @@
   cursor: pointer;
   inline-size: 39px;
   block-size: 38px;
+  transition: border-color 0.3s ease;
 }
 .save-button {
   display: flex;
