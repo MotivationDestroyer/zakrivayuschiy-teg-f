@@ -109,6 +109,7 @@
     0 -1px var(--stroke-color);
   mix-blend-mode: hard-light;
   text-transform: uppercase;
+  z-index: 1;
 }
 @supports (
   (-webkit-text-stroke: 1px var(--stroke-color)) or
@@ -133,12 +134,7 @@
   gap: 6px;
   padding: 0 25px 25px;
 }
-button {
-  font-family: var(--accent-font);
-  font-size: 14px;
-  line-height: 0.9;
-  cursor: pointer;
-}
+
 .card__like-button {
   display: flex;
   justify-content: center;
@@ -150,6 +146,10 @@ button {
 }
 
 .button {
+    font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 0.9;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
@@ -214,12 +214,6 @@ button {
   mix-blend-mode: difference;
 }
 
-.sprites {
-  position: absolute;
-  overflow: hidden;
-  inline-size: 0;
-  block-size: 0;
-}
 .dialog {
   display: none;
   border: 2px solid #000;
